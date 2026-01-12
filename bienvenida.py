@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QLineEdit
+from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QLabel
 
 class Ventana(QWidget):
     def __init__(self):
@@ -7,12 +7,12 @@ class Ventana(QWidget):
 
         # Configuración de la ventana
         self.setWindowTitle("Nivel 1 - Saludo")
-        self.setGeometry(600, 600, 350, 200)
+        self.setGeometry(200, 200, 350, 200)
 
         # Texto
         self.etiqueta = QLabel("Haz clic para saludar", self)
-        #de aqui para abajo
-        self.input_nombre = QLineEdit(self)
+        self.etiqueta.move(100, 50)
+        #Anotar lo de abajo
         self.input_nombre.setPlaceholderText("Escribe tu nombre")
         self.input_nombre.move(100, 75)
         self.input_nombre.resize(150, 25)
